@@ -1,5 +1,13 @@
+import Nav from './components/Nav/Nav';
+
 function App() {
-	return <div className='App'>1</div>;
+	const path = process.env.PUBLIC_URL;
+
+	return (
+		<div className='App'>
+			<Nav path={path} />
+		</div>
+	);
 }
 
 export default App;
