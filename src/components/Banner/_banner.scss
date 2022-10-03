@@ -2,6 +2,7 @@
   color: white;
   object-fit: contain;
   height: 448px;
+ 
   &-contents {
     margin-left: 40px;
     padding-top: 140px;
@@ -11,11 +12,10 @@
       font-weight: 800;
       padding-bottom: 0.5rem;
     }
-    &-button {
-      font-size: 3rem;
-      font-weight: 800;
-      padding-bottom: 0.5rem;
-      .banner-button {
+    &-buttons {
+      display: flex;
+    button {
+      &.banner-button {
         display: flex;
         flex-direction: row;
         justify-content: start;
@@ -49,6 +49,7 @@
 
       }
     }
+  }
     &-description{
       width: 45rem;
       line-height: 1.3;

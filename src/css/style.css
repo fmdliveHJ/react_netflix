@@ -16,13 +16,11 @@
   padding-bottom: 0.5rem;
 }
 
-.banner-contents-button {
-  font-size: 3rem;
-  font-weight: 800;
-  padding-bottom: 0.5rem;
+.banner-contents-buttons {
+  display: flex;
 }
 
-.banner-contents-button .banner-button {
+.banner-contents-buttons button.banner-button {
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -37,23 +35,23 @@
   margin-right: 1rem;
 }
 
-.banner-contents-button .banner-button:hover {
+.banner-contents-buttons button.banner-button:hover {
   color: #000;
   background-color: rgba(170, 170, 170, 0.9);
   transition: all 0.2s;
 }
 
-.banner-contents-button .banner-button.play {
+.banner-contents-buttons button.banner-button.play {
   background-color: white;
   color: black;
 }
 
-.banner-contents-button .banner-button.info {
+.banner-contents-buttons button.banner-button.info {
   background-color: rgba(109, 109, 110, 0.7);
   color: white;
 }
 
-.banner-contents-button .banner-button.info:hover {
+.banner-contents-buttons button.banner-button.info:hover {
   background-color: #4a4a4a;
   color: white;
 }
