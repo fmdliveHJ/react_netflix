@@ -1,8 +1,11 @@
 import axios from '../../api/axios';
 import React, { useEffect, useState } from 'react';
+// import MovieModal from '../Moviemodal';
 
 const Row = ({ title, fetchUrl, isLargeRow, id }) => {
 	const [movies, setMovies] = useState([]);
+	const [modalOpen, setModalOpen] = useState(false);
+	const [movieSelected, setMovieSelected] = useState({});
 
 	useEffect(() => {
 		fetchMoviedata();
@@ -12,6 +15,12 @@ const Row = ({ title, fetchUrl, isLargeRow, id }) => {
 		const request = await axios.get(fetchUrl);
 		console.log(request);
 		setMovies(request.data.results);
+	};
+
+	const handleCllck = (movie) => {
+		setModalOpen(true);
+		//핸들클릭할때 무비의 정보도 보내주기 위해서 state 생성
+		setMovieSelected(movie);
 	};
 
 	return (
@@ -36,6 +45,7 @@ const Row = ({ title, fetchUrl, isLargeRow, id }) => {
 							src={`https://image.tmdb.org/t/p/original/${
 								isLargeRow ? movie.poster_path : movie.backdrop_path
 							} `}
+							onClick={() => handleCllck(movie)}
 						/>
 					))}
 				</div>
@@ -49,6 +59,9 @@ const Row = ({ title, fetchUrl, isLargeRow, id }) => {
 					</span>
 				</div>
 			</div>
+			{/* {modalOpen && (
+				<MovieModal {...movieSelected} setModalOpen={setModalOpen} />
+			)} */}
 		</section>
 	);
 };
