@@ -1,5 +1,6 @@
 import axios from '../../api/axios';
 import React, { useEffect, useState } from 'react';
+import MovieModal from '../MovieModal';
 // import MovieModal from '../Moviemodal';
 
 const Row = ({ title, fetchUrl, isLargeRow, id }) => {
@@ -59,9 +60,9 @@ const Row = ({ title, fetchUrl, isLargeRow, id }) => {
 					</span>
 				</div>
 			</div>
-			{/* {modalOpen && (
+			{modalOpen && (
 				<MovieModal {...movieSelected} setModalOpen={setModalOpen} />
-			)} */}
+			)}
 		</section>
 	);
 };

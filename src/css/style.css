@@ -336,13 +336,62 @@ h2 {
   position: absolute;
 }
 
-.modal {
+.presentation .wrapper {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation .modal {
   position: relative;
   max-width: 800px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
   background: #111;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: all 400ms ease-in-out 2s;
   animation: fadeIn 400ms;
+}
+
+.presentation .modal-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white;
+  font-size: 30px;
+}
+
+.presentation .modal-img {
+  width: 100%;
+  height: auto;
+}
+
+.presentation .modal-content {
+  padding: 40px;
+  color: white;
+}
+
+.presentation .modal-content-details {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.presentation .modal-content-details-user {
+  color: #46d369;
+}
+
+.presentation .modal-content-title {
+  padding: 0;
+  font-size: 40px;
+  margin: 16px 0;
+}
+
+.presentation .modal-content-overview {
+  font-size: 20px;
+  line-height: 1.5;
 }
